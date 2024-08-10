@@ -40,3 +40,97 @@ footer {
     }
   }
 }
+
+/* My Dream Section */
+
+.dream-box {
+  position: relative;
+  background-color: #0d6efd;
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.dream-box::before {
+  content: "MY";
+  position: absolute;
+  color: #fff;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.dream-box:hover::before {
+  transform: translate(-50%, 0);
+  opacity: 0.2;
+}
+
+.dream-box::after {
+  content: "DREAM";
+  position: absolute;
+  color: #fff;
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+  bottom: 50px;
+  right: 50%;
+  transform: translate(50%, -100%);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.dream-box:hover::after {
+  transform: translate(50%, 0);
+  opacity: 0.2;
+}
+
+.dream-name {
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  top: 0;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 0.5s;
+}
+
+.dream-box:hover .dream-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.dream-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 50px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.dream-box:hover .dream-detail-button {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.dream-img {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate3d(-50%, -54%, 100px);
+  max-width: 300px;
+  max-height: 300px;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.dream-box:hover .dream-img {
+  transform: translate3d(-50%, -54%, 100px) rotate(-2deg) scale(1.3);
+}

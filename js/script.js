@@ -29,3 +29,10 @@ form.addEventListener("submit", (e) => {
 myClose.addEventListener("click", () => {
   myAlert.classList.toggle("d-none");
 });
+
+// Vanilla Tilt JS
+VanillaTilt.init(document.querySelectorAll(".dream-box"), {
+  max: 35,
+  speed: 1000,
+  glare: true,
+});
