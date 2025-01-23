@@ -4,7 +4,7 @@
 
 .jumbotron {
   padding-top: 6rem;
-  background-color: var(--bg);
+  background-color: var(--bs-body-bg);
 }
 
 section {
